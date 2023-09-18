@@ -22,7 +22,7 @@ CLI para contabilizar a quantidade de tempo gasto com as suas atividades
 
 ### Prerequisites
 
-```
+```programs
 Python3
 MySQL
 ```
@@ -31,29 +31,45 @@ MySQL
 
 Para executar o script é necessário os seguintes passos:
 
-```
+1. Instalar conector mysql do python com o seguinte comando:
+
+```bash
 pip install mysql-connector-python
 ```
 
-Também é necessário criar a base de dados no MySQL, e alterar as informações de acesso no script
+2. Criar a base de dados no MySQL, chamada `horas_atividades` e alterar as informações de acesso ao banco de dados no script
 
 ## Usage <a name = "usage"></a>
 
 A CLI possui três funcionalidades: iniciar, finalizar e listar
-Ao executar a funcionalidade de listar deve ser passado como parâmetro a descrição da atividade
+Ao executar a funcionalidade `iniciar` deve-se passar como parâmetro a descrição da atividade.
+
+![options](img/01_options.png)
 
 ### Exemplos de execução
 
 #### iniciar
-```
+
+```python
 python3 crono_task.py iniciar 'Development: implementar funcionalidade X'
 ```
+
+![iniciar](img/02_iniciar.png)
+
 #### finalizar
+
 OBS: Se existir mais de uma atividade inicializada, as mesmas serão finalizadas na ordem inversa de criação.
-```
+
+```python
 python3 crono_task.py finalizar
 ```
+
+![finalizar](img/04_finalizar.png)
+
 #### listar
-```
+
+```python
 python3 crono_task.py listar
 ```
+
+![listar](img/03_listar.png)
